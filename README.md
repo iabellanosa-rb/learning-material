@@ -12,8 +12,8 @@ An interactive quiz game that tests your knowledge of animals, habitats, and wil
 - 4 difficulty levels: Easy, Medium, Hard, and Extra Hard
 - 88 unique questions across categories like General Animals, Fun Facts, and Wildlife & Habitats
 - Two question types: multiple choice and true/false
-- 10 randomly selected questions per quiz session from the difficulty's question pool
-- Countdown timer that adjusts per difficulty (5:00 down to 1:30)
+- 15 randomly selected questions per quiz session from the difficulty's question pool
+- Countdown timer that adjusts per difficulty (4:30 down to 1:00)
 - Instant answer feedback with visual highlights (correct/incorrect)
 - Score tracking with percentage-based grade results
 - Persistent leaderboard (top 20 scores stored in localStorage)
@@ -24,10 +24,10 @@ An interactive quiz game that tests your knowledge of animals, habitats, and wil
 
 | Level | Timer | Description |
 |---|---|---|
-| Easy | 5:00 | Perfect for beginners |
-| Medium | 3:30 | A fair challenge |
-| Hard | 2:30 | For true animal experts |
-| Extra Hard | 1:30 | Only the bravest dare |
+| Easy | 4:30 | Perfect for beginners |
+| Medium | 3:00 | A fair challenge |
+| Hard | 2:00 | For true animal experts |
+| Extra Hard | 1:00 | Only the bravest dare |
 
 **Question categories:**
 - **General Animals** - anatomy, species identification, animal groups, and biology

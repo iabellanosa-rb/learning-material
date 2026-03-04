@@ -52,7 +52,9 @@ export default function Results({ score, total, difficulty, timeUsed, onSaveScor
         <div className="save-score">
           <h3>Save your score to the leaderboard</h3>
           <div className="save-input-row">
+            <label htmlFor="leaderboard-name" className="sr-only">Enter your name</label>
             <input
+              id="leaderboard-name"
               type="text"
               placeholder="Enter your name"
               value={name}

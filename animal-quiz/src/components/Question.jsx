@@ -3,14 +3,14 @@ import { useState } from "react";
 export default function Question({ question, questionNumber, total, onAnswer }) {
   const [selected, setSelected] = useState(null);
   const [answered, setAnswered] = useState(false);
+  const [imgError, setImgError] = useState(false);
 
   const handleSelect = (value) => {
     if (answered) return;
     setSelected(value);
     setAnswered(true);
 
-    const isCorrect =
-      question.type === "true-false" ? value === question.answer : value === question.answer;
+    const isCorrect = value === question.answer;
 
     setTimeout(() => {
       onAnswer(isCorrect);
@@ -21,8 +21,7 @@ export default function Question({ question, questionNumber, total, onAnswer }) 
 
   const getOptionClass = (value) => {
     if (!answered) return "";
-    const isCorrect =
-      question.type === "true-false" ? value === question.answer : value === question.answer;
+    const isCorrect = value === question.answer;
     if (value === selected && isCorrect) return "correct";
     if (value === selected && !isCorrect) return "incorrect";
     if (isCorrect) return "correct";
@@ -43,9 +42,13 @@ export default function Question({ question, questionNumber, total, onAnswer }) 
 
       <h2 className="question-text">{question.question}</h2>
 
-      {question.image && (
+      {question.image && !imgError && (
         <div className="question-image">
-          <img src={question.image} alt="" />
+          <img
+            src={question.image}
+            alt={`Photo related to: ${question.question}`}
+            onError={() => setImgError(true)}
+          />
         </div>
       )}
 
