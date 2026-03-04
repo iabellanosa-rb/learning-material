@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import Question from "./Question";
 import Timer from "./Timer";
 import useTimer from "../hooks/useTimer";
@@ -30,9 +30,9 @@ export default function Quiz({ difficulty, onFinish }) {
 
   const timer = useTimer(TIMER_SECONDS[difficulty], handleTimeUp);
 
-  useState(() => {
+  useEffect(() => {
     timer.start();
-  });
+  }, [timer]);
 
   const handleAnswer = useCallback(
     (isCorrect) => {
