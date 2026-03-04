@@ -43,6 +43,12 @@ export default function Question({ question, questionNumber, total, onAnswer }) 
 
       <h2 className="question-text">{question.question}</h2>
 
+      {question.image && (
+        <div className="question-image">
+          <img src={question.image} alt="" />
+        </div>
+      )}
+
       <div className="options">
         {question.type === "true-false" ? (
           <div className="tf-options">

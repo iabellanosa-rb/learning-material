@@ -338,6 +338,20 @@
   margin-bottom: 1.75rem;
 }
 
+.question-image {
+  margin-bottom: 1.75rem;
+  text-align: center;
+}
+
+.question-image img {
+  max-width: 100%;
+  max-height: 250px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(122, 182, 72, 0.15);
+}
+
 /* ===== Options ===== */
 .mc-options {
   display: flex;
@@ -700,6 +714,10 @@ tr.rank-3 {
 
   .question-text {
     font-size: 1.15rem;
+  }
+
+  .question-image img {
+    max-height: 180px;
   }
 
   .results-stats {
