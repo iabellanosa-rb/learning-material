@@ -4,7 +4,9 @@ export default function useTimer(initialSeconds, onTimeUp) {
   const [seconds, setSeconds] = useState(initialSeconds);
   const [isRunning, setIsRunning] = useState(false);
   const onTimeUpRef = useRef(onTimeUp);
-  onTimeUpRef.current = onTimeUp;
+  useEffect(() => {
+    onTimeUpRef.current = onTimeUp;
+  });
 
   useEffect(() => {
     if (!isRunning || seconds <= 0) return;

@@ -14,7 +14,10 @@ export default function Quiz({ difficulty, onFinish }) {
   const [questions] = useState(() => getRandomQuestions(difficulty));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const startTime = useRef(Date.now());
+  const startTime = useRef(null);
+  useEffect(() => {
+    startTime.current = Date.now();
+  }, []);
 
   const handleFinish = useCallback(
     (finalScore) => {
