@@ -64,7 +64,7 @@ export default function Quiz({ difficulty, onFinish }) {
         </div>
       </div>
 
-      <div className="progress-bar">
+      <div className="progress-bar" role="progressbar" aria-valuenow={Math.round(progress)} aria-valuemin={0} aria-valuemax={100} aria-label={`Question ${currentIndex + 1} of ${questions.length}`}>
         <div className="progress-fill" style={{ width: `${progress}%` }} />
       </div>
 
