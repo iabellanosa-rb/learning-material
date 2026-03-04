@@ -4,6 +4,7 @@ const DIFFICULTY_INFO = {
   easy: { label: "Easy", time: "5:00", emoji: "🌱", description: "Perfect for beginners" },
   medium: { label: "Medium", time: "3:30", emoji: "🌿", description: "A fair challenge" },
   hard: { label: "Hard", time: "2:30", emoji: "🌲", description: "For true animal experts" },
+  "extra-hard": { label: "Extra Hard", time: "1:30", emoji: "🔥", description: "Only the bravest dare" },
 };
 
 export default function StartScreen({ onStart, onShowLeaderboard }) {

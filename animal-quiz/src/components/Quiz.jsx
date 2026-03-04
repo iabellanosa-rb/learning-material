@@ -8,6 +8,7 @@ const TIMER_SECONDS = {
   easy: 300,
   medium: 210,
   hard: 150,
+  "extra-hard": 90,
 };
 
 export default function Quiz({ difficulty, onFinish }) {
