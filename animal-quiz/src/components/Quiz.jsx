@@ -5,10 +5,10 @@ import useTimer from "../hooks/useTimer";
 import { getRandomQuestions } from "../data/questions";
 
 const TIMER_SECONDS = {
-  easy: 300,
-  medium: 210,
-  hard: 150,
-  "extra-hard": 90,
+  easy: 450,
+  medium: 315,
+  hard: 225,
+  "extra-hard": 135,
 };
 
 export default function Quiz({ difficulty, onFinish }) {
