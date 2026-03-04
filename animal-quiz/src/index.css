@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green-dark: #2d5016;
+  --green-mid: #4a7c23;
+  --green-light: #7ab648;
+  --green-pale: #c8e6a0;
+  --earth-dark: #5c3d2e;
+  --earth-mid: #8b6914;
+  --earth-light: #c4a35a;
+  --earth-pale: #f5e6c8;
+  --cream: #faf8f0;
+  --white: #ffffff;
+  --text-primary: #2c3e1a;
+  --text-secondary: #5a6b47;
+  --correct: #2d8a4e;
+  --correct-bg: #d4edda;
+  --incorrect: #c0392b;
+  --incorrect-bg: #f8d7da;
+  --urgent: #e67e22;
+  --critical: #e74c3c;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+body {
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--green-mid);
+  outline-offset: 2px;
+}
+
+input {
+  font-family: inherit;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
