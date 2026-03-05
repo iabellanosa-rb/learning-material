@@ -644,7 +644,7 @@ const questions = {
   ],
 };
 
-export function getRandomQuestions(difficulty, count = 15) {
+export function getRandomQuestions(difficulty, count = 10) {
   const pool = questions[difficulty];
   const shuffled = [...pool].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, count);
